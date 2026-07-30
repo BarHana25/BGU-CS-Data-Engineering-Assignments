@@ -1,3 +1,0 @@
-/Users/bar_hana/Desktop/BGU/סמסטר ג/תכנות מתקדם/עבודה 1/Pokemon1/cmake-build-debug/CMakeFiles/Pokemon1.dir
-/Users/bar_hana/Desktop/BGU/סמסטר ג/תכנות מתקדם/עבודה 1/Pokemon1/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/bar_hana/Desktop/BGU/סמסטר ג/תכנות מתקדם/עבודה 1/Pokemon1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
