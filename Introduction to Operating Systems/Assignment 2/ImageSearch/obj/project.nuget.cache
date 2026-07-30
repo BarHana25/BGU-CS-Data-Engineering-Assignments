@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "JCFIgOTObkI=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Mika\\OneDrive - post.bgu.ac.il\\Desktop\\Semeter D\\os\\Task 2\\ImageSearch\\ImageSearch.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mika\\.nuget\\packages\\microsoft.win32.systemevents\\10.0.8\\microsoft.win32.systemevents.10.0.8.nupkg.sha512",
+    "C:\\Users\\Mika\\.nuget\\packages\\system.drawing.common\\10.0.8\\system.drawing.common.10.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}
