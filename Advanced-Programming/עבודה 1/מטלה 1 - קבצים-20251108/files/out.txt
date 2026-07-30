@@ -1,0 +1,1 @@
+Usage : calculatePayment.sh <valid_file_name> [More_files] ... <money>
