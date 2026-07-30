@@ -1,0 +1,3 @@
+apple .3 kg
+024 items
+discount -3
