@@ -1,0 +1,14 @@
+/Users/bar_hana/Desktop/BGU/סמסטר ד/מבוא למערכות הפעלה/עבודות/עבודה 1/IMDb_Vector_DB/CPU-Process/CPU-Process/bin/Debug/net10.0/CPU-Process
+/Users/bar_hana/Desktop/BGU/סמסטר ד/מבוא למערכות הפעלה/עבודות/עבודה 1/IMDb_Vector_DB/CPU-Process/CPU-Process/bin/Debug/net10.0/CPU-Process.deps.json
+/Users/bar_hana/Desktop/BGU/סמסטר ד/מבוא למערכות הפעלה/עבודות/עבודה 1/IMDb_Vector_DB/CPU-Process/CPU-Process/bin/Debug/net10.0/CPU-Process.runtimeconfig.json
+/Users/bar_hana/Desktop/BGU/סמסטר ד/מבוא למערכות הפעלה/עבודות/עבודה 1/IMDb_Vector_DB/CPU-Process/CPU-Process/bin/Debug/net10.0/CPU-Process.dll
+/Users/bar_hana/Desktop/BGU/סמסטר ד/מבוא למערכות הפעלה/עבודות/עבודה 1/IMDb_Vector_DB/CPU-Process/CPU-Process/bin/Debug/net10.0/CPU-Process.pdb
+/Users/bar_hana/Desktop/BGU/סמסטר ד/מבוא למערכות הפעלה/עבודות/עבודה 1/IMDb_Vector_DB/CPU-Process/CPU-Process/obj/Debug/net10.0/CPU-Process.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bar_hana/Desktop/BGU/סמסטר ד/מבוא למערכות הפעלה/עבודות/עבודה 1/IMDb_Vector_DB/CPU-Process/CPU-Process/obj/Debug/net10.0/CPU-Process.AssemblyInfoInputs.cache
+/Users/bar_hana/Desktop/BGU/סמסטר ד/מבוא למערכות הפעלה/עבודות/עבודה 1/IMDb_Vector_DB/CPU-Process/CPU-Process/obj/Debug/net10.0/CPU-Process.AssemblyInfo.cs
+/Users/bar_hana/Desktop/BGU/סמסטר ד/מבוא למערכות הפעלה/עבודות/עבודה 1/IMDb_Vector_DB/CPU-Process/CPU-Process/obj/Debug/net10.0/CPU-Process.csproj.CoreCompileInputs.cache
+/Users/bar_hana/Desktop/BGU/סמסטר ד/מבוא למערכות הפעלה/עבודות/עבודה 1/IMDb_Vector_DB/CPU-Process/CPU-Process/obj/Debug/net10.0/CPU-Process.dll
+/Users/bar_hana/Desktop/BGU/סמסטר ד/מבוא למערכות הפעלה/עבודות/עבודה 1/IMDb_Vector_DB/CPU-Process/CPU-Process/obj/Debug/net10.0/refint/CPU-Process.dll
+/Users/bar_hana/Desktop/BGU/סמסטר ד/מבוא למערכות הפעלה/עבודות/עבודה 1/IMDb_Vector_DB/CPU-Process/CPU-Process/obj/Debug/net10.0/CPU-Process.pdb
+/Users/bar_hana/Desktop/BGU/סמסטר ד/מבוא למערכות הפעלה/עבודות/עבודה 1/IMDb_Vector_DB/CPU-Process/CPU-Process/obj/Debug/net10.0/CPU-Process.genruntimeconfig.cache
+/Users/bar_hana/Desktop/BGU/סמסטר ד/מבוא למערכות הפעלה/עבודות/עבודה 1/IMDb_Vector_DB/CPU-Process/CPU-Process/obj/Debug/net10.0/ref/CPU-Process.dll
