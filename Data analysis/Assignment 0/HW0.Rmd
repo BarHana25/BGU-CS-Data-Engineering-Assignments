@@ -1,0 +1,112 @@
+---
+title: "Homework 0"
+author: "Bar Hana Yehezkel 322723206"
+description: "The goal of this homework is to introduce you to R, RStudio and R Markdown. In the assignment you will need to submit the html file created by knitting this .rmd file, where every code chunk is properly filled based on the instructions."
+output: html_document
+---
+
+
+
+### Instructions
+
+1. All assignments are individual! 
+2. No submission for this assignment.
+3. Questions about the assignment should be asked using the Assignments forums. 
+
+
+The goal of this homework is to introduce you to R, RStudio and R Markdown. In the assignment you will need to submit the .rmd file created by this markdown project, where every chunk is filled properly based on the instructions.
+
+```{r, warning = FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+### 'Questions' 
+Q1. Given a vector x = (17, 14, 4, 5, 13, 12, 10) set all elements of this vector that are greater than 10 to be equal to 4.  (10 points)
+
+```{r, eval = FALSE}
+x <- c(17, 14, 4, 5, 13, 12, 10)
+x[x > 10] <- 4
+x
+```
+
+
+Q2. Create a function that receives a vector and returns the max, min, mean values.  (10 points)
+
+```{r, eval = FALSE}
+myFunc <- function(vec) {
+
+    return_list <- list(max = max(vec), min = min(vec), mean = mean(vec))
+    return (return_list)
+}
+myFunc(c(67,2,4,5,23,1,54,6,7,8,33))
+
+```
+
+Q3. Create a function that calculates the factorial of an integer (n!) using a while loop.  (20 points)
+
+```{r, eval = FALSE}
+factorial <- function(n) {
+  result <- 1
+  while(n > 0) {
+    result <- result * n
+    n <- n - 1
+  }
+  return(result)
+}
+factorial(5) 
+```
+
+## Seatbelts dataset
+
+Let's take a look at the seatbelts dataset, which is based on the "Road Casualties in Great Britain 1969-84" inbuilt R data set.
+The 'Seatbelts' dataset in R is a multiple time-series that was commissioned by the Department of Transport in 1984 to measure differences in deaths before and after front seatbelt legislation was introduced on 31st January 1983.
+
+For simpler view, run the following chunk:
+
+```{r}
+data(Seatbelts)
+Seatbelts <- data.frame(
+  Year=floor(time(Seatbelts)),
+  Month=factor(cycle(Seatbelts), labels=month.abb), 
+  Seatbelts)
+```
+
+```{r}
+head(Seatbelts)
+```
+
+```{r}
+str(Seatbelts)
+```
+
+Q4. sort and print 'drivers' variable. (10 points)
+```{r, eval=FALSE}
+sort(Seatbelts$drivers)
+```
+
+Q5. print rows 3-6 from Seatbelts dataset. (10 points)
+
+```{r, eval=FALSE}
+Seatbelts[3:6, ]
+```
+
+Q6. print the data for the year 1970 (10 points)
+```{r, eval=FALSE}
+Seatbelts[Seatbelts$Year == 1970, ]
+```
+
+Q7. calculate the mean of 'kms' attribute for January ('Jan') and for February ('Feb') months. (20 points)
+```{r, eval=FALSE}
+jan_set = Seatbelts[Seatbelts$Month == "Jan", ]
+feb_set = Seatbelts[Seatbelts$Month == "Feb", ]
+
+mean(jan_set$kms)
+mean(feb_set$kms)
+```
+
+Q8. Use the 'boxplot' function (part of the R basic 'graphics' package, not ggplot) to create a boxplot for the 'kms' attribute for January ('Jan') data and another plot for the February ('Feb') months. (10 points)
+```{r, eval=FALSE}
+boxplot(jan_set$kms, main="Kms in January")
+boxplot(feb_set$kms, main="Kms in February")
+```
+

@@ -1,0 +1,178 @@
+---
+title: "HW1: Data Visualization"
+author: "Bar Hana Yehezkel - 322723206"
+output: html_document
+---
+# Homework 1
+
+### Instructions
+
+1. All assignments are individual!
+2. This assignment should be uploaded as one html file (after knit).
+3. Questions about the assignment should be asked using the Assignments forums. 
+4. Write your name and id at the top of the file 
+
+
+
+```{r, warning=FALSE, message=FALSE}
+#knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+
+library(tidyverse)
+```
+
+### MPG dataset
+```{r}
+data(mpg)
+```
+
+
+```{r}
+str(mpg)
+```
+## Problem 1: Histograms
+
+Using the `mpg` dataset from `ggplot2`:
+
+- Create histograms for the variable `hwy`, grouped by vehicle `class`.
+- Briefly describe differences between the classes.
+```{r}
+ggplot(data = mpg, aes(x = hwy)) + 
+  geom_histogram(bins = 10, fill = "steelblue", color = "white") + 
+  facet_wrap(~ class)
+
+```
+
+differences between the classes:
+
+Significant differences can be seen between vehicle classes. SUVs and Pickups show the highest fuel consumption (low hwy values, around 15-20 mpg), while smaller vehicles like Compact and Subcompact cars are the most fuel-efficient, with some reaching over 40 mpg.
+
+## Problem 2: Boxplots
+
+Using the `mpg` dataset:
+
+- Create boxplots of `cty` (city mileage) grouped by `drv` (type of drive train).
+- Identify and briefly discuss any noticeable outliers.
+
+```{r}
+ggplot(data = mpg, aes(x = drv, y = cty)) + 
+  geom_boxplot(fill = "indianred", color = "black") +
+  labs(title = "City Mileage by Drive Train Type", 
+       x = "Drive Train (4=4wd, f=fwd, r=rwd)",
+       y = "City MPG")
+
+```
+
+
+The boxplot shows that front-wheel drive (f) vehicles generally have the highest city mileage, followed by rear-wheel drive (r) and 4-wheel drive (4). Several outliers are visible in the front-wheel drive category, representing specific car models with exceptionally high city fuel efficiency compared to the rest of the group.
+
+## Problem 3: Scatterplots
+
+Using the `mpg` dataset:
+
+- Create a scatterplot of `displ` (engine displacement) vs. `hwy` (highway mileage).
+- Briefly describe the relationship.
+- Use the `class` variable to color the points and briefly discuss insights gained.
+
+```{r}
+ggplot(data = mpg, aes(x = displ, y = hwy, colour = class))+
+  geom_point(size = 2) +
+  labs(title = "Engine Displacement vs. Highway Mileage",
+       x = "Engine Displacement (Liters)",
+       y = "Highway MPG")
+```
+
+
+The scatterplot reveals a negative relationship between engine displacement and highway mileage: as the engine size increases, fuel efficiency tends to decrease. By coloring the points by class, we can see that '2seater' cars are exceptions, having large engines but maintaining relatively higher mileage compared to SUVs or Pickups with similar engine sizes.
+
+## Problem 4: 5 parameters in one graph
+- Pick 3 numerical variables and  2 categorical variable and make a visualization of them and provide an interpretation with your answer.
+
+```{r, fig.width=14, fig.height=12}
+ggplot(data = mpg, aes(x = displ, y = hwy, size = cyl, color = factor(year))) +
+  geom_jitter(alpha = 0.5, width = 0.1, height = 0.1) +
+ # geom_point(alpha = 0.6) +
+  facet_wrap(~manufacturer, ncol = 3) +
+  labs(title = "Engine Size vs. Highway MPG by Manufacturer",
+       subtitle = "Size represents number of cylinders | Color represents year",
+       x = "Engine Displacement (L)",
+       y = "Highway MPG",
+       color = "Year",
+       size = "Cylinders") +
+  theme_minimal(base_size = 18) +
+  theme(legend.position = "bottom",
+        strip.text = element_text(size = 20, face = "bold"),
+        plot.title = element_text(size = 24, face = "bold"),
+        axis.title = element_text(size = 18),
+        legend.text = element_text(size = 16))
+
+```
+
+
+This visualization demonstrates how different manufacturers progressed between 1999 and 2008. By using facets for each manufacturer, we can see that some brands (like Honda) consistently produce high-efficiency cars with fewer cylinders, while others (like Dodge) rely on larger engines with more cylinders, resulting in lower highway mileage regardless of the year.
+
+## Problem 5: Reflection and Interpretation
+
+Reflect briefly (2-3 sentences each) on the following:
+
+> **Why is choosing the right visualization type crucial when exploring data?**
+>
+> Selecting the appropriate visualization is essential because different plots are designed to highlight specific data characteristics, such as distributions, correlations, or comparisons. If the wrong type is chosen, important patterns can be obscured, making it difficult for the audience to grasp the actual story the data is trying to tell.
+
+> **In what ways can misleading visualizations negatively impact decision-making or understanding?**
+>
+> Misleading visualizations, such as those with truncated Y-axes or disproportionate scales, can exaggerate minor differences and create a false sense of urgency or success. This can lead stakeholders to make costly errors or implement incorrect strategies based on a distorted perception of the facts rather than the reality of the data.
+
+> **Give an example of a situation where visualizing data helped you understand something better or changed your perspective.**
+>
+> While looking at the raw mpg dataset, it was nearly impossible to identify which car manufacturers were the most fuel-efficient across their entire lineup. However, once I created a faceted visualization, it became immediately clear that brands like Honda and Toyota consistently outperform others in highway mileage, a realization that was hidden within the hundreds of rows of raw numbers.
+
+## Problem 6: write Rcode for the following graphs
+
+### 1. write a code to plot the following plot.
+for this question use data(mpg, package="ggplot2") 
+
+![](1.png)
+```{r}
+library(ggplot2)
+data(mpg, package="ggplot2")
+ggplot(mpg, aes(x = class, y = cty)) +
+  geom_boxplot(fill = "plum2", varwidth = TRUE) +
+  labs(
+    title = "Box plot",
+    subtitle = "City Mileage grouped by Class of vehicle",
+    x = "Class of Vehicle",
+    y = "City Mileage",
+    caption = "Source: mpg"
+  ) +
+  theme_classic() +
+  theme(
+    plot.title = element_text(face = "plain"),
+    plot.subtitle = element_text(face = "plain")
+  )
+```
+
+
+### 2. write a code to plot the following plot
+for this question use data(mpg, package="ggplot2") 
+![](2.png)
+
+```{r}
+library(ggplot2)
+data(mpg, package = "ggplot2")
+
+ggplot(mpg, aes(x = manufacturer, fill = class)) +
+  geom_bar(width = 0.5) + 
+  labs(
+    title = "Histogram on Categorical Variable",
+    subtitle = "Manufacturer across Vehicle Classes",
+    x = "manufacturer",
+    y = "count"
+  ) +
+  theme_classic() +
+  theme(
+    axis.text.x = element_text(angle = 65, vjust = 0.6),
+    plot.title = element_text(size = 14),
+    legend.position = "right"
+  )
+```

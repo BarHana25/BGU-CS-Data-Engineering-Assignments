@@ -1,0 +1,377 @@
+---
+title: "HW4: Overfitting & Temporal Drift in Text Models"
+author: "Bar Hana Yehezkel - 322723206"
+output:
+  html_document:
+    toc: true
+    theme: united
+---
+
+### Instructions
+
+1. All assignments are individual!
+2. This assignment should be uploaded as one html file (after knit).
+3. Questions about the assignment should be asked using the Assignments forums. 
+4. Write your name and id at the top of the file.
+
+
+**Exercise overview:** Your team is building a model to predict whether a news article will go viral (1) or not (0). A teammate trained a logistic regression model using simple word count vectors from the article *titles* and reported an **AUC of 0.98**, claiming it is "production-ready." The test set consists of articles published in the last three months, while the training set consists of older articles. Your objective is to reveal flaws in your teammate's model, and implement a more robust solution.
+
+**Datasets:** 
+
+* `train.csv` (Older articles)
+* `test.csv` (Recent articles)
+* Target variable: `viral` (1 = Viral, 0 = Not Viral)
+
+---
+
+## 0 Setup
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(message = FALSE, warning = FALSE, echo = TRUE)
+set.seed(123)   # make your work reproducible!
+
+```
+
+Install/load the packages you will need. Recommended: tidyverse, tidymodels, and textrecipes (for text processing).
+
+```{r packages}
+library(tidyverse)
+library(tidymodels)
+library(textrecipes)
+library(knitr)
+library(kableExtra)
+
+```
+
+---
+
+## 1 Data Preparation
+
+* Load train.csv and test.csv into dataframes.
+* Inspect the data: Look at the title and date columns to understand the temporal split.
+* Ensure the target variable viral is a factor.
+
+```{r data-prep}
+# TODO: load train.csv test.csv here
+# Load train and test data and immediately convert the target to a factor
+train_data <- read_csv("train.csv") %>% 
+  mutate(viral = as.factor(viral))
+
+test_data <- read_csv("test.csv") %>% 
+  mutate(viral = as.factor(viral))
+# TODO: inspect the data (glimpse or head)
+# 1. Create a beautiful consolidated temporal summary table
+temporal_summary <- tibble(
+  Dataset = c("Training Set (Older Articles)", "Test Set (Recent Articles)"),
+  `Min Date` = c(min(train_data$date), min(test_data$date)),
+  `Median Date` = c(median(train_data$date), median(test_data$date)),
+  `Max Date` = c(max(train_data$date), max(test_data$date)),
+  `Total Observations` = c(nrow(train_data), nrow(test_data))
+)
+
+# Display the temporal breakdown table
+temporal_summary %>%
+  kable(caption = "Temporal Distribution and Dataset Sizes") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+# 2. Display a polished, responsive preview of the training data
+# Note: 'content' column is excluded here just for clean visual presentation
+train_data %>%
+  head(5) %>%
+  select(article_id, date, category, author, title, viral) %>%
+  kable(caption = "Polished Preview of Training Dataset (First 5 Rows)") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "responsive"), font_size = 13)
+
+```
+
+---
+
+## 2 Basic Model Evaluation (The "Naive" Approach)
+**Task:** Replicate your teammate's model.
+
+* Create a recipe that uses the `title` text to predict `viral`.
+* Tokenize the text and create word count vectors (e.g., `step_tokenize`, `step_tokenfilter`, `step_tf`).
+* Train a Logistic Regression model on the training set.
+* Compute AUC and plot the Precision-Recall Curve for both the Training set and the Test set.
+
+**Note for Students:** For compute efficiently, set the model engine to `"glmnet"` and use `max_tokens = 1000`. 
+
+If you use the standard `"glm"` engine or a larger vocabulary (e.g., 20,000 words), the model training will be extremely slow or may crash your R session.
+
+```{r replication}
+# TODO: 
+# 1. Define the Recipe (Text preprocessing steps)
+viral_rec <- recipe(viral ~ title, data = train_data) %>%
+  step_tokenize(title) %>%
+  step_tokenfilter(title, max_tokens = 1000) %>%
+  step_tf(title)
+
+# 2. Define the Logistic Regression Model with a set penalty
+viral_mod <- logistic_reg(penalty = 0.01) %>%
+  set_engine("glmnet")
+
+# 3. Combine into a Workflow and fit the model on the Train data
+viral_wflow <- workflow() %>%
+  add_recipe(viral_rec) %>%
+  add_model(viral_mod)
+
+viral_fit <- viral_wflow %>%
+  fit(data = train_data)
+
+# 4. Generate probability predictions for both Train and Test sets
+train_preds <- predict(viral_fit, train_data, type = "prob") %>%
+  bind_cols(train_data)
+
+test_preds <- predict(viral_fit, test_data, type = "prob") %>%
+  bind_cols(test_data)
+
+# 5. Calculate AUC metric for both datasets
+train_auc <- train_preds %>% 
+  roc_auc(truth = viral, .pred_1, event_level = "second")
+
+test_auc <- test_preds %>% 
+  roc_auc(truth = viral, .pred_1, event_level = "second")
+
+# 6. Create a clean, formatted table for the AUC results
+auc_results <- bind_rows(
+  train_auc %>% mutate(Dataset = "Training Data"),
+  test_auc %>% mutate(Dataset = "Test Data")
+) %>%
+  select(Dataset, .estimate) %>%
+  rename(AUC = .estimate)
+
+# Display the table using kableExtra
+auc_results %>%
+  kable(caption = "Naive Model Performance (AUC)", digits = 3) %>%
+  kable_styling(bootstrap_options = c("striped", "hover"), full_width = FALSE)
+
+# 7. Plot an aesthetic Precision-Recall Curve comparing Train and Test performance
+bind_rows(
+  train_preds %>% pr_curve(truth = viral, .pred_1, event_level = "second") %>% mutate(Dataset = "Train"),
+  test_preds %>% pr_curve(truth = viral, .pred_1, event_level = "second") %>% mutate(Dataset = "Test")
+) %>%
+  ggplot(aes(x = recall, y = precision, color = Dataset)) +
+  geom_path(linewidth = 1) +
+  theme_minimal() +
+  scale_color_brewer(palette = "Set1") +
+  labs(
+    title = "Precision-Recall Curve Comparison: Train vs. Test",
+    subtitle = "Visualizing the severe overfitting gap using PR metrics",
+    x = "Recall (Sensitivity)",
+    y = "Precision (Positive Predictive Value)"
+  ) +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    legend.position = "bottom"
+  )
+```
+
+**Question 2.1:** Compare the performance on Training vs. Test data. Do you notice a large gap? What does this suggest about the model's ability to generalize to the future?
+
+**Answer:** Yes, there is a massive gap between the Training performance (which is very high) and the Test performance (which is significantly lower). This substantial discrepancy strongly indicates overfitting. The model essentially "memorized" the specific vocabulary that was popular in the training set (2015-2016) rather than learning the underlying, general patterns of viral content. Consequently, it completely fails to generalize to future data (2020-2021) where the discourse and trending topics have changed. Specifically, as visualized in the Precision-Recall Curve, the model achieved an outstanding Train PR AUC of 0.956, but collapsed to a Test PR AUC of 0.154.
+
+
+---
+
+## 3 Feature Dimensionality & Overfitting
+**Task:** Investigate what the model actually learned.
+
+* Print the total number of text features (words) in your vocabulary.
+* Extract the model coefficients. Find the top 10 words with the highest positive coefficients (words that strongly predict "Viral").
+
+```{r feat-dims}
+# TODO: 
+# Extract model coefficients into a tidy dataframe
+model_coefs <- tidy(viral_fit)
+
+# Filter out the Intercept to count and keep only text features
+text_features <- model_coefs %>% 
+  filter(term != "(Intercept)")
+
+# Calculate the total number of text features
+total_features <- nrow(text_features)
+
+# 1. Explicitly print the total number of text features as requested
+cat("Total number of text features in the vocabulary:", total_features, "\n")
+
+# 2. Extract top 10 words with the highest positive coefficients
+top_10_viral_words <- text_features %>%
+  arrange(desc(estimate)) %>%
+  head(10) %>%
+  select(term, estimate) %>%
+  rename(Word = term, Coefficient = estimate)
+
+# Display the top 10 words in a clean, professional table
+top_10_viral_words %>%
+  kable(caption = "Top 10 Words Predicting Virality", digits = 4) %>%
+  kable_styling(bootstrap_options = c("striped", "hover"), full_width = FALSE)
+
+# Plot a horizontal bar chart of the top 10 coefficients
+top_10_viral_words %>%
+  ggplot(aes(x = reorder(Word, Coefficient), y = Coefficient, fill = Coefficient)) +
+  geom_col(show.legend = FALSE) +
+  coord_flip() + # Flips the chart for better readability of word labels
+  theme_minimal() +
+  scale_fill_viridis_c(option = "mako", begin = 0.3, end = 0.8) + # Professional color palette
+  labs(
+    title = "Top 10 Most Predictive Words for Virality",
+    subtitle = "Based on naive model logistic regression coefficients",
+    x = "Word",
+    y = "Coefficient Weight (Positive Association)"
+  ) +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    axis.text.y = element_text(size = 11, face = "bold")
+  )
+
+```
+
+**Question 3.1:** Look at the top "Viral" words. Do they represent general concepts (e.g., "shocking", "amazing") or specific historical events/trends? Why is this a problem?
+
+**Answer:** The top predicting words (e.g., "car", "honda", "autos", "lights") do not represent general viral concepts. Instead, they reflect specific historical trends or topics (likely related to the automotive industry at that specific time). This is a major problem because news trends are highly dynamic. A model that relies heavily on temporary buzzwords will quickly lose its predictive power and become obsolete as soon as new events dominate the headlines, a phenomenon known as Concept or Temporal Drift.
+
+---
+
+## 4 Temporal Generalization Issues
+**Task:** Verify if the learned features exist in the future.
+
+* Take the top 5 "Viral" words you identified in the previous section. Count how many times these specific words appear in the Test Set (the newer articles).
+
+```{r temp-gen}
+# TODO:
+## 1. Define the top 5 predictive words identified from the training set
+top_5_words <- c("car", "honda", "cars", "autos", "lights")
+
+# 2. Count the occurrences of each word in the future Test Set titles
+word_counts_in_test <- map_df(top_5_words, function(w) {
+  tibble(
+    Word = w,
+    Occurrences = sum(str_count(test_data$title, w))
+  )
+})
+
+# 3. Display the counts in a clean, professional HTML table
+word_counts_in_test %>%
+  kable(caption = "Occurrences of Top Training Words in the Future Test Set") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"), full_width = FALSE)
+
+# 4. Plot a bar chart to visually demonstrate the feature decay in future data
+word_counts_in_test %>%
+  ggplot(aes(x = reorder(Word, Occurrences), y = Occurrences, fill = Word)) +
+  geom_col(show.legend = FALSE) +
+  coord_flip() + # Flip chart for horizontal presentation and better readability
+  theme_minimal() +
+  scale_fill_brewer(palette = "Dark2") + # Clean and professional color palette
+  labs(
+    title = "Frequency of Past 'Viral' Words in Future Data",
+    subtitle = "Visualizing how predictive features disappear over time",
+    x = "Word",
+    y = "Total Occurrences in Test Set Titles"
+  ) +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    axis.text.y = element_text(size = 11, face = "bold")
+  )
+```
+
+**Question 4.1:** Do the words that were highly predictive in the past appear in the future data? Explain why a time-separated test set is particularly challenging for high-dimensional text features (Bag-of-Words).
+
+**Answer:** As seen in the counts, the words that were highly predictive in the past appear very rarely in the future test data. A time-separated test set is particularly challenging for Bag-of-Words (BoW) models because BoW relies on exact word matches and treats each word as an isolated feature. When the news cycle shifts, the original features (words) stop appearing, rendering them useless. The model lacks the semantic understanding to recognize new trending words or synonyms, making it essentially "blind" to future data.
+
+---
+
+## 5 LLM Audit & Improvement
+**Task:** Use an LLM (ChatGPT/Gemini/Claude) to help fix the model.
+
+* Prompt the LLM: Ask it to suggest reasons why simple word counts fail on time-separated data and request feature engineering improvements.
+* Implement ONE improvement: Choose one suggestion and train a new model.
+* Compare: Evaluate this new model on the Test set.
+
+```{r LLM}
+# TODO: 
+# 1. Build an improved recipe with feature engineering updates
+viral_rec_improved <- recipe(viral ~ title, data = train_data) %>%
+  step_tokenize(title) %>%
+  step_stopwords(title) %>% # Improvement 1: Remove uninformative stop words
+  step_tokenfilter(title, max_tokens = 1000) %>%
+  step_tfidf(title) # Improvement 2: Shift from raw counts (TF) to TF-IDF weights
+
+# 2. Define the model engine and Workflow
+viral_mod <- logistic_reg(penalty = 0.01) %>%
+  set_engine("glmnet")
+
+viral_wflow_improved <- workflow() %>%
+  add_recipe(viral_rec_improved) %>%
+  add_model(viral_mod)
+
+# 3. Fit the improved model on the training data
+viral_fit_improved <- viral_wflow_improved %>%
+  fit(data = train_data)
+
+# 4. Generate probability predictions for both datasets
+train_preds_improved <- predict(viral_fit_improved, train_data, type = "prob") %>%
+  bind_cols(train_data)
+
+test_preds_improved <- predict(viral_fit_improved, test_data, type = "prob") %>%
+  bind_cols(test_data)
+
+# 5. Calculate AUC metrics for the improved model
+train_auc_improved <- train_preds_improved %>% 
+  roc_auc(truth = viral, .pred_1, event_level = "second")
+
+test_auc_improved <- test_preds_improved %>% 
+  roc_auc(truth = viral, .pred_1, event_level = "second")
+
+# 6. Create a clean comparison table for the improved results
+improved_auc_results <- bind_rows(
+  train_auc_improved %>% mutate(Dataset = "Improved Training Data"),
+  test_auc_improved %>% mutate(Dataset = "Improved Test Data")
+) %>%
+  select(Dataset, .estimate) %>%
+  rename(AUC = .estimate)
+
+# Display the table using kableExtra
+improved_auc_results %>%
+  kable(caption = "Improved Model Performance (AUC)", digits = 3) %>%
+  kable_styling(bootstrap_options = c("striped", "hover"), full_width = FALSE)
+
+# 7. Plot the new ROC Curve to visualize generalization improvements
+bind_rows(
+  train_preds_improved %>% roc_curve(truth = viral, .pred_1, event_level = "second") %>% mutate(Dataset = "Train (Improved)"),
+  test_preds_improved %>% roc_curve(truth = viral, .pred_1, event_level = "second") %>% mutate(Dataset = "Test (Improved)")
+) %>%
+  ggplot(aes(x = 1 - specificity, y = sensitivity, color = Dataset)) +
+  geom_path(linewidth = 1) +
+  geom_abline(lty = 3, color = "gray50") + # Reference line for random guessing
+  theme_minimal() +
+  scale_color_brewer(palette = "Set2") + # Distinct color palette from section 2
+  labs(
+    title = "ROC Curve: Improved Model (TF-IDF & Stopwords)",
+    subtitle = "Evaluating generalization after fixing high-dimensional feature issues",
+    x = "False Positive Rate (1 - Specificity)",
+    y = "True Positive Rate (Sensitivity)"
+  ) +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    legend.position = "bottom"
+  )
+```
+
+**Question 5.1:** Describe the improvement you implemented.
+
+**Answer:** I implemented two main feature engineering improvements in the recipe: First, I added step_stopwords() to remove common, uninformative linking words (e.g., "the", "and") that add noise. Second, I replaced the simple term frequency (step_tf) with TF-IDF (step_tfidf). TF-IDF penalizes words that appear in almost all articles and gives higher weight to unique, meaningful words, helping the model focus on the actual informative content rather than frequent filler words.
+
+**Question 5.2:** Did the gap between Train and Test AUC decrease? (Note: It is okay if the Test AUC is still low, as long as the Train AUC is no longer artificially perfect).
+
+**Answer:** Yes, the Test AUC improved from 0.518 to 0.572, indicating that removing stop words and using TF-IDF helped the model generalize slightly better to future data. However, the Train AUC remained very high (0.984), showing that while the new features helped, predicting viral news titles remains a hard task and the model still heavily overfits to the training vocabulary.
+
+
+---
+
+## 6 Conclusion
+**Question 6.1:** Summarize your findings. Why was the teammate's reported "0.98 AUC" misleading? What is the most important lesson when dealing with time-series or news data?
+
+**Answer:** The teammate's reported "0.98 AUC" was highly misleading because it was a result of severe overfitting to specific, time-bound vocabulary rather than actual viral characteristics. When exposed to new, unseen data from a different time period, the model's performance collapsed. The most important lesson when dealing with time-series or news data is that you must always use a chronological split (time-based split). Training on past data and evaluating strictly on future data is the only way to accurately simulate a real-world production environment and proactively identify Temporal Drift.
+
+---
