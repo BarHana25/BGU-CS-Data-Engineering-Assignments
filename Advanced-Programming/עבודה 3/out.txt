@@ -1,0 +1,1205 @@
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Fire:
+1. Ponyta :
+FireHorsePokemon, Fire Type.
+Height: 1.00 m    Weight: 30.00 kg    Attack: 85
+
+2. Growlithe :
+PuppyPokemon, Fire Type.
+Height: 0.70 m    Weight: 19.00 kg    Attack: 70
+
+3. Charmander :
+LizardPokemon, Fire Type.
+Height: 0.60 m    Weight: 8.50 kg    Attack: 52
+
+Water:
+1. Psyduck :
+DuckPokemon, Water Type.
+Height: 0.80 m    Weight: 19.60 kg    Attack: 52
+
+2. Squirtle :
+TinyTurtlePokemon, Water Type.
+Height: 0.50 m    Weight: 9.00 kg    Attack: 48
+
+Electric:
+1. Pikachu :
+MousePokemon, Electric Type.
+Height: 0.40 m    Weight: 6.00 kg    Attack: 55
+
+Grass:
+No elements.
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Type Fire -- 3 pokemons
+	These types are super-effective against Fire:Water ,Electric
+	Fire moves are super-effective against:Grass
+
+Type Water -- 2 pokemons
+
+Type Electric -- 1 pokemons
+	Electric moves are super-effective against:Fire
+
+Type Grass -- 0 pokemons
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter Pokemon type name:
+Type name doesn't exist.
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter Pokemon type name:
+Please enter Pokemon name:
+Please enter Pokemon species:
+Please enter Pokemon height:
+Please enter Pokemon weight:
+Please enter Pokemon attack:
+The Pokemon was successfully added.
+Oddish :
+WeedPokemon, Grass Type.
+Height: 0.50 m    Weight: 5.40 kg    Attack: 50
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Fire:
+1. Ponyta :
+FireHorsePokemon, Fire Type.
+Height: 1.00 m    Weight: 30.00 kg    Attack: 85
+
+2. Growlithe :
+PuppyPokemon, Fire Type.
+Height: 0.70 m    Weight: 19.00 kg    Attack: 70
+
+3. Charmander :
+LizardPokemon, Fire Type.
+Height: 0.60 m    Weight: 8.50 kg    Attack: 52
+
+Water:
+1. Psyduck :
+DuckPokemon, Water Type.
+Height: 0.80 m    Weight: 19.60 kg    Attack: 52
+
+2. Squirtle :
+TinyTurtlePokemon, Water Type.
+Height: 0.50 m    Weight: 9.00 kg    Attack: 48
+
+Electric:
+1. Pikachu :
+MousePokemon, Electric Type.
+Height: 0.40 m    Weight: 6.00 kg    Attack: 55
+
+Grass:
+1. Oddish :
+WeedPokemon, Grass Type.
+Height: 0.50 m    Weight: 5.40 kg    Attack: 50
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Type Fire -- 3 pokemons
+	These types are super-effective against Fire:Water ,Electric
+	Fire moves are super-effective against:Grass
+
+Type Water -- 2 pokemons
+
+Type Electric -- 1 pokemons
+	Electric moves are super-effective against:Fire
+
+Type Grass -- 1 pokemons
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter Pokemon type name:
+Please enter Pokemon name:
+Please enter Pokemon species:
+Please enter Pokemon height:
+Please enter Pokemon weight:
+Please enter Pokemon attack:
+The Pokemon was successfully added.
+Magmar :
+SpitfirePokemon, Fire Type.
+Height: 1.30 m    Weight: 44.50 kg    Attack: 80
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Fire:
+1. Ponyta :
+FireHorsePokemon, Fire Type.
+Height: 1.00 m    Weight: 30.00 kg    Attack: 85
+
+2. Magmar :
+SpitfirePokemon, Fire Type.
+Height: 1.30 m    Weight: 44.50 kg    Attack: 80
+
+3. Growlithe :
+PuppyPokemon, Fire Type.
+Height: 0.70 m    Weight: 19.00 kg    Attack: 70
+
+4. Charmander :
+LizardPokemon, Fire Type.
+Height: 0.60 m    Weight: 8.50 kg    Attack: 52
+
+Water:
+1. Psyduck :
+DuckPokemon, Water Type.
+Height: 0.80 m    Weight: 19.60 kg    Attack: 52
+
+2. Squirtle :
+TinyTurtlePokemon, Water Type.
+Height: 0.50 m    Weight: 9.00 kg    Attack: 48
+
+Electric:
+1. Pikachu :
+MousePokemon, Electric Type.
+Height: 0.40 m    Weight: 6.00 kg    Attack: 55
+
+Grass:
+1. Oddish :
+WeedPokemon, Grass Type.
+Height: 0.50 m    Weight: 5.40 kg    Attack: 50
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Type Fire -- 4 pokemons
+	These types are super-effective against Fire:Water ,Electric
+	Fire moves are super-effective against:Grass
+
+Type Water -- 2 pokemons
+
+Type Electric -- 1 pokemons
+	Electric moves are super-effective against:Fire
+
+Type Grass -- 1 pokemons
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter Pokemon type name:
+Type at full capacity.
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter type name:
+Type name doesn't exist.
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter type name:
+The strongest Pokemon was removed:
+Ponyta :
+FireHorsePokemon, Fire Type.
+Height: 1.00 m    Weight: 30.00 kg    Attack: 85
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Fire:
+1. Magmar :
+SpitfirePokemon, Fire Type.
+Height: 1.30 m    Weight: 44.50 kg    Attack: 80
+
+2. Growlithe :
+PuppyPokemon, Fire Type.
+Height: 0.70 m    Weight: 19.00 kg    Attack: 70
+
+3. Charmander :
+LizardPokemon, Fire Type.
+Height: 0.60 m    Weight: 8.50 kg    Attack: 52
+
+Water:
+1. Psyduck :
+DuckPokemon, Water Type.
+Height: 0.80 m    Weight: 19.60 kg    Attack: 52
+
+2. Squirtle :
+TinyTurtlePokemon, Water Type.
+Height: 0.50 m    Weight: 9.00 kg    Attack: 48
+
+Electric:
+1. Pikachu :
+MousePokemon, Electric Type.
+Height: 0.40 m    Weight: 6.00 kg    Attack: 55
+
+Grass:
+1. Oddish :
+WeedPokemon, Grass Type.
+Height: 0.50 m    Weight: 5.40 kg    Attack: 50
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Type Fire -- 3 pokemons
+	These types are super-effective against Fire:Water ,Electric
+	Fire moves are super-effective against:Grass
+
+Type Water -- 2 pokemons
+
+Type Electric -- 1 pokemons
+	Electric moves are super-effective against:Fire
+
+Type Grass -- 1 pokemons
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter Pokemon type name:
+Please enter Pokemon name:
+Please enter Pokemon species:
+Please enter Pokemon height:
+Please enter Pokemon weight:
+Please enter Pokemon attack:
+The Pokemon was successfully added.
+Charmeleon :
+FlamePokemon, Fire Type.
+Height: 1.10 m    Weight: 19.00 kg    Attack: 20
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Fire:
+1. Magmar :
+SpitfirePokemon, Fire Type.
+Height: 1.30 m    Weight: 44.50 kg    Attack: 80
+
+2. Growlithe :
+PuppyPokemon, Fire Type.
+Height: 0.70 m    Weight: 19.00 kg    Attack: 70
+
+3. Charmander :
+LizardPokemon, Fire Type.
+Height: 0.60 m    Weight: 8.50 kg    Attack: 52
+
+4. Charmeleon :
+FlamePokemon, Fire Type.
+Height: 1.10 m    Weight: 19.00 kg    Attack: 20
+
+Water:
+1. Psyduck :
+DuckPokemon, Water Type.
+Height: 0.80 m    Weight: 19.60 kg    Attack: 52
+
+2. Squirtle :
+TinyTurtlePokemon, Water Type.
+Height: 0.50 m    Weight: 9.00 kg    Attack: 48
+
+Electric:
+1. Pikachu :
+MousePokemon, Electric Type.
+Height: 0.40 m    Weight: 6.00 kg    Attack: 55
+
+Grass:
+1. Oddish :
+WeedPokemon, Grass Type.
+Height: 0.50 m    Weight: 5.40 kg    Attack: 50
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Type Fire -- 4 pokemons
+	These types are super-effective against Fire:Water ,Electric
+	Fire moves are super-effective against:Grass
+
+Type Water -- 2 pokemons
+
+Type Electric -- 1 pokemons
+	Electric moves are super-effective against:Fire
+
+Type Grass -- 1 pokemons
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter Pokemon type name:
+Type name doesn't exist.
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter Pokemon type name:
+Please enter Pokemon name:
+Please enter Pokemon species:
+Please enter Pokemon height:
+Please enter Pokemon weight:
+Please enter Pokemon attack:
+You choose to fight with:
+Charizard :
+FlamePokemon, Fire Type.
+Height: 1.70 m    Weight: 90.50 kg    Attack: 90
+
+The final battle between:
+Charizard :
+FlamePokemon, Fire Type.
+Height: 1.70 m    Weight: 90.50 kg    Attack: 90
+
+In this battle his attack is :90
+
+against Magmar :
+SpitfirePokemon, Fire Type.
+Height: 1.30 m    Weight: 44.50 kg    Attack: 80
+
+In this battle his attack is :80
+
+THE WINNER IS:
+Charizard :
+FlamePokemon, Fire Type.
+Height: 1.70 m    Weight: 90.50 kg    Attack: 90
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter Pokemon type name:
+Please enter Pokemon name:
+Please enter Pokemon species:
+Please enter Pokemon height:
+Please enter Pokemon weight:
+Please enter Pokemon attack:
+You choose to fight with:
+Vulpix :
+FoxPokemon, Fire Type.
+Height: 0.60 m    Weight: 9.90 kg    Attack: 42
+
+The final battle between:
+Vulpix :
+FoxPokemon, Fire Type.
+Height: 0.60 m    Weight: 9.90 kg    Attack: 42
+
+In this battle his attack is :42
+
+against Magmar :
+SpitfirePokemon, Fire Type.
+Height: 1.30 m    Weight: 44.50 kg    Attack: 80
+
+In this battle his attack is :80
+
+THE WINNER IS:
+Magmar :
+SpitfirePokemon, Fire Type.
+Height: 1.30 m    Weight: 44.50 kg    Attack: 80
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter Pokemon type name:
+Please enter Pokemon name:
+Please enter Pokemon species:
+Please enter Pokemon height:
+Please enter Pokemon weight:
+Please enter Pokemon attack:
+You choose to fight with:
+Lapras :
+TransportPokemon, Water Type.
+Height: 2.50 m    Weight: 220.00 kg    Attack: 70
+
+The final battle between:
+Lapras :
+TransportPokemon, Water Type.
+Height: 2.50 m    Weight: 220.00 kg    Attack: 70
+
+In this battle his attack is :70
+
+against Magmar :
+SpitfirePokemon, Fire Type.
+Height: 1.30 m    Weight: 44.50 kg    Attack: 80
+
+In this battle his attack is :70
+
+IT IS A DRAW.
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Type Fire -- 4 pokemons
+	These types are super-effective against Fire:Water ,Electric
+	Fire moves are super-effective against:Grass
+
+Type Water -- 2 pokemons
+
+Type Electric -- 1 pokemons
+	Electric moves are super-effective against:Fire
+
+Type Grass -- 1 pokemons
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter type name:
+The strongest Pokemon was removed:
+Magmar :
+SpitfirePokemon, Fire Type.
+Height: 1.30 m    Weight: 44.50 kg    Attack: 80
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Fire:
+1. Growlithe :
+PuppyPokemon, Fire Type.
+Height: 0.70 m    Weight: 19.00 kg    Attack: 70
+
+2. Charmander :
+LizardPokemon, Fire Type.
+Height: 0.60 m    Weight: 8.50 kg    Attack: 52
+
+3. Charmeleon :
+FlamePokemon, Fire Type.
+Height: 1.10 m    Weight: 19.00 kg    Attack: 20
+
+Water:
+1. Psyduck :
+DuckPokemon, Water Type.
+Height: 0.80 m    Weight: 19.60 kg    Attack: 52
+
+2. Squirtle :
+TinyTurtlePokemon, Water Type.
+Height: 0.50 m    Weight: 9.00 kg    Attack: 48
+
+Electric:
+1. Pikachu :
+MousePokemon, Electric Type.
+Height: 0.40 m    Weight: 6.00 kg    Attack: 55
+
+Grass:
+1. Oddish :
+WeedPokemon, Grass Type.
+Height: 0.50 m    Weight: 5.40 kg    Attack: 50
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Type Fire -- 3 pokemons
+	These types are super-effective against Fire:Water ,Electric
+	Fire moves are super-effective against:Grass
+
+Type Water -- 2 pokemons
+
+Type Electric -- 1 pokemons
+	Electric moves are super-effective against:Fire
+
+Type Grass -- 1 pokemons
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter type name:
+The strongest Pokemon was removed:
+Growlithe :
+PuppyPokemon, Fire Type.
+Height: 0.70 m    Weight: 19.00 kg    Attack: 70
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Fire:
+1. Charmander :
+LizardPokemon, Fire Type.
+Height: 0.60 m    Weight: 8.50 kg    Attack: 52
+
+2. Charmeleon :
+FlamePokemon, Fire Type.
+Height: 1.10 m    Weight: 19.00 kg    Attack: 20
+
+Water:
+1. Psyduck :
+DuckPokemon, Water Type.
+Height: 0.80 m    Weight: 19.60 kg    Attack: 52
+
+2. Squirtle :
+TinyTurtlePokemon, Water Type.
+Height: 0.50 m    Weight: 9.00 kg    Attack: 48
+
+Electric:
+1. Pikachu :
+MousePokemon, Electric Type.
+Height: 0.40 m    Weight: 6.00 kg    Attack: 55
+
+Grass:
+1. Oddish :
+WeedPokemon, Grass Type.
+Height: 0.50 m    Weight: 5.40 kg    Attack: 50
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Type Fire -- 2 pokemons
+	These types are super-effective against Fire:Water ,Electric
+	Fire moves are super-effective against:Grass
+
+Type Water -- 2 pokemons
+
+Type Electric -- 1 pokemons
+	Electric moves are super-effective against:Fire
+
+Type Grass -- 1 pokemons
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter Pokemon type name:
+Please enter Pokemon name:
+Please enter Pokemon species:
+Please enter Pokemon height:
+Please enter Pokemon weight:
+Please enter Pokemon attack:
+You choose to fight with:
+Magneton :
+MagnetPokemon, Electric Type.
+Height: 1.00 m    Weight: 60.00 kg    Attack: 50
+
+The final battle between:
+Magneton :
+MagnetPokemon, Electric Type.
+Height: 1.00 m    Weight: 60.00 kg    Attack: 50
+
+In this battle his attack is :50
+
+against Pikachu :
+MousePokemon, Electric Type.
+Height: 0.40 m    Weight: 6.00 kg    Attack: 55
+
+In this battle his attack is :55
+
+THE WINNER IS:
+Pikachu :
+MousePokemon, Electric Type.
+Height: 0.40 m    Weight: 6.00 kg    Attack: 55
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter type name:
+The strongest Pokemon was removed:
+Pikachu :
+MousePokemon, Electric Type.
+Height: 0.40 m    Weight: 6.00 kg    Attack: 55
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Fire:
+1. Charmander :
+LizardPokemon, Fire Type.
+Height: 0.60 m    Weight: 8.50 kg    Attack: 52
+
+2. Charmeleon :
+FlamePokemon, Fire Type.
+Height: 1.10 m    Weight: 19.00 kg    Attack: 20
+
+Water:
+1. Psyduck :
+DuckPokemon, Water Type.
+Height: 0.80 m    Weight: 19.60 kg    Attack: 52
+
+2. Squirtle :
+TinyTurtlePokemon, Water Type.
+Height: 0.50 m    Weight: 9.00 kg    Attack: 48
+
+Electric:
+No elements.
+
+Grass:
+1. Oddish :
+WeedPokemon, Grass Type.
+Height: 0.50 m    Weight: 5.40 kg    Attack: 50
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Type Fire -- 2 pokemons
+	These types are super-effective against Fire:Water ,Electric
+	Fire moves are super-effective against:Grass
+
+Type Water -- 2 pokemons
+
+Type Electric -- 0 pokemons
+	Electric moves are super-effective against:Fire
+
+Type Grass -- 1 pokemons
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter Pokemon type name:
+Please enter Pokemon name:
+Please enter Pokemon species:
+Please enter Pokemon height:
+Please enter Pokemon weight:
+Please enter Pokemon attack:
+You choose to fight with:
+Magneton :
+MagnetPokemon, Electric Type.
+Height: 1.00 m    Weight: 606.00 kg    Attack: 50
+
+The final battle between:
+Magneton :
+MagnetPokemon, Electric Type.
+Height: 1.00 m    Weight: 606.00 kg    Attack: 50
+
+In this battle his attack is :50
+
+against Psyduck :
+DuckPokemon, Water Type.
+Height: 0.80 m    Weight: 19.60 kg    Attack: 52
+
+In this battle his attack is :52
+
+THE WINNER IS:
+Psyduck :
+DuckPokemon, Water Type.
+Height: 0.80 m    Weight: 19.60 kg    Attack: 52
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter type name:
+The strongest Pokemon was removed:
+Psyduck :
+DuckPokemon, Water Type.
+Height: 0.80 m    Weight: 19.60 kg    Attack: 52
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Fire:
+1. Charmander :
+LizardPokemon, Fire Type.
+Height: 0.60 m    Weight: 8.50 kg    Attack: 52
+
+2. Charmeleon :
+FlamePokemon, Fire Type.
+Height: 1.10 m    Weight: 19.00 kg    Attack: 20
+
+Water:
+1. Squirtle :
+TinyTurtlePokemon, Water Type.
+Height: 0.50 m    Weight: 9.00 kg    Attack: 48
+
+Electric:
+No elements.
+
+Grass:
+1. Oddish :
+WeedPokemon, Grass Type.
+Height: 0.50 m    Weight: 5.40 kg    Attack: 50
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter Pokemon type name:
+Please enter Pokemon name:
+Please enter Pokemon species:
+Please enter Pokemon height:
+Please enter Pokemon weight:
+Please enter Pokemon attack:
+You choose to fight with:
+Magneton :
+MagnetPokemon, Electric Type.
+Height: 1.00 m    Weight: 60.00 kg    Attack: 50
+
+The final battle between:
+Magneton :
+MagnetPokemon, Electric Type.
+Height: 1.00 m    Weight: 60.00 kg    Attack: 50
+
+In this battle his attack is :50
+
+against Oddish :
+WeedPokemon, Grass Type.
+Height: 0.50 m    Weight: 5.40 kg    Attack: 50
+
+In this battle his attack is :50
+
+IT IS A DRAW.
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter type name:
+The strongest Pokemon was removed:
+Oddish :
+WeedPokemon, Grass Type.
+Height: 0.50 m    Weight: 5.40 kg    Attack: 50
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Fire:
+1. Charmander :
+LizardPokemon, Fire Type.
+Height: 0.60 m    Weight: 8.50 kg    Attack: 52
+
+2. Charmeleon :
+FlamePokemon, Fire Type.
+Height: 1.10 m    Weight: 19.00 kg    Attack: 20
+
+Water:
+1. Squirtle :
+TinyTurtlePokemon, Water Type.
+Height: 0.50 m    Weight: 9.00 kg    Attack: 48
+
+Electric:
+No elements.
+
+Grass:
+No elements.
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Type Fire -- 2 pokemons
+	These types are super-effective against Fire:Water ,Electric
+	Fire moves are super-effective against:Grass
+
+Type Water -- 1 pokemons
+
+Type Electric -- 0 pokemons
+	Electric moves are super-effective against:Fire
+
+Type Grass -- 0 pokemons
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter Pokemon type name:
+Please enter Pokemon name:
+Please enter Pokemon species:
+Please enter Pokemon height:
+Please enter Pokemon weight:
+Please enter Pokemon attack:
+You choose to fight with:
+Magneton :
+MagnetPokemon, Electric Type.
+Height: 1.00 m    Weight: 60.00 kg    Attack: 50
+
+The final battle between:
+Magneton :
+MagnetPokemon, Electric Type.
+Height: 1.00 m    Weight: 60.00 kg    Attack: 50
+
+In this battle his attack is :50
+
+against Squirtle :
+TinyTurtlePokemon, Water Type.
+Height: 0.50 m    Weight: 9.00 kg    Attack: 48
+
+In this battle his attack is :48
+
+THE WINNER IS:
+Magneton :
+MagnetPokemon, Electric Type.
+Height: 1.00 m    Weight: 60.00 kg    Attack: 50
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter type name:
+The strongest Pokemon was removed:
+Squirtle :
+TinyTurtlePokemon, Water Type.
+Height: 0.50 m    Weight: 9.00 kg    Attack: 48
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Fire:
+1. Charmander :
+LizardPokemon, Fire Type.
+Height: 0.60 m    Weight: 8.50 kg    Attack: 52
+
+2. Charmeleon :
+FlamePokemon, Fire Type.
+Height: 1.10 m    Weight: 19.00 kg    Attack: 20
+
+Water:
+No elements.
+
+Electric:
+No elements.
+
+Grass:
+No elements.
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter Pokemon type name:
+Please enter Pokemon name:
+Please enter Pokemon species:
+Please enter Pokemon height:
+Please enter Pokemon weight:
+Please enter Pokemon attack:
+You choose to fight with:
+Magneton :
+MagnetPokemon, Electric Type.
+Height: 1.00 m    Weight: 60.00 kg    Attack: 50
+
+The final battle between:
+Magneton :
+MagnetPokemon, Electric Type.
+Height: 1.00 m    Weight: 60.00 kg    Attack: 50
+
+In this battle his attack is :50
+
+against Charmander :
+LizardPokemon, Fire Type.
+Height: 0.60 m    Weight: 8.50 kg    Attack: 52
+
+In this battle his attack is :42
+
+THE WINNER IS:
+Magneton :
+MagnetPokemon, Electric Type.
+Height: 1.00 m    Weight: 60.00 kg    Attack: 50
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter type name:
+The strongest Pokemon was removed:
+Charmander :
+LizardPokemon, Fire Type.
+Height: 0.60 m    Weight: 8.50 kg    Attack: 52
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter type name:
+The strongest Pokemon was removed:
+Charmeleon :
+FlamePokemon, Fire Type.
+Height: 1.10 m    Weight: 19.00 kg    Attack: 20
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter type name:
+There is no Pokemon to remove.
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Fire:
+No elements.
+
+Water:
+No elements.
+
+Electric:
+No elements.
+
+Grass:
+No elements.
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter Pokemon type name:
+Please enter Pokemon name:
+Please enter Pokemon species:
+Please enter Pokemon height:
+Please enter Pokemon weight:
+Please enter Pokemon attack:
+You choose to fight with:
+Magneton :
+MagnetPokemon, Electric Type.
+Height: 1.00 m    Weight: 60.00 kg    Attack: 50
+
+There are no Pokemons to fight against you.
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Fire:
+No elements.
+
+Water:
+No elements.
+
+Electric:
+No elements.
+
+Grass:
+No elements.
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Type Fire -- 0 pokemons
+	These types are super-effective against Fire:Water ,Electric
+	Fire moves are super-effective against:Grass
+
+Type Water -- 0 pokemons
+
+Type Electric -- 0 pokemons
+	Electric moves are super-effective against:Fire
+
+Type Grass -- 0 pokemons
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Please enter Pokemon type name:
+Please enter Pokemon name:
+Please enter Pokemon species:
+Please enter Pokemon height:
+Please enter Pokemon weight:
+Please enter Pokemon attack:
+The Pokemon was successfully added.
+Magneton :
+MagnetPokemon, Electric Type.
+Height: 1.00 m    Weight: 60.00 kg    Attack: 50
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Fire:
+No elements.
+
+Water:
+No elements.
+
+Electric:
+1. Magneton :
+MagnetPokemon, Electric Type.
+Height: 1.00 m    Weight: 60.00 kg    Attack: 50
+
+Grass:
+No elements.
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+Type Fire -- 0 pokemons
+	These types are super-effective against Fire:Water ,Electric
+	Fire moves are super-effective against:Grass
+
+Type Water -- 0 pokemons
+
+Type Electric -- 1 pokemons
+	Electric moves are super-effective against:Fire
+
+Type Grass -- 0 pokemons
+
+Please choose one of the following numbers:
+1 : Print all Pokemons by types
+2 : Print all Pokemons types
+3 : Insert Pokemon to battles training camp
+4 : Remove strongest Pokemon by type
+5 : Fight
+6 : Exit
+All the memory cleaned and the program is safely closed.

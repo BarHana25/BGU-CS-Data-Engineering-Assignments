@@ -1,0 +1,4 @@
+/Users/bar_hana/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Users/bar_hana/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -DCMAKE_C_COMPILER=/Library/Developer/CommandLineTools/usr/bin/clang -DCMAKE_CXX_COMPILER=/Library/Developer/CommandLineTools/usr/bin/clang++ -G Ninja -S "/Users/bar_hana/Desktop/BGU/סמסטר ג/תכנות מתקדם/עבודה 3" -B "/Users/bar_hana/Desktop/BGU/סמסטר ג/תכנות מתקדם/עבודה 3/cmake-build-debug"
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/bar_hana/Desktop/BGU/סמסטר ג/תכנות מתקדם/עבודה 3/cmake-build-debug
