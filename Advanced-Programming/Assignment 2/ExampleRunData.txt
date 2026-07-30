@@ -1,0 +1,12 @@
+Types
+Fire,Water,Electric,Grass
+	Fire effective-against-me:Water,Electric
+	Fire effective-against-other:Grass
+	Electric effective-against-other:Fire
+Pokemons
+Pikachu,MousePokemon,0.4,6.0,55,Electric
+Charmander,LizardPokemon,0.6,8.5,52,Fire
+Ponyta,FireHorsePokemon,1.0,30.0,85,Fire
+Squirtle,TinyTurtlePokemon,0.5,9.0,48,Water
+Psyduck,DuckPokemon,0.8,19.6,52,Water
+Growlithe,PuppyPokemon,0.7,19,70,Fire
